@@ -1,0 +1,22 @@
+//base
+@import "base/mixins";
+@import "base/all";
+@import "base/variables";
+
+
+
+
+
+//components
+@import "components/footer";
+@import "components/contact_form";
+@import "components/gallery";
+@import "components/btn";
+@import "components/menu";
+@import "components/admin";
+
+
+
+
+//pages
+@import "pages/home";

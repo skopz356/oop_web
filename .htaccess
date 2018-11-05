@@ -1,0 +1,17 @@
+RewriteEngine on
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-l
+RewriteRule ^(.*)$ index.php/$1
+
+# ErrorDocument 404 /not_found.php
+# RewriteEngine On
+# RewriteBase /
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteRule ^(.+)$ index.php [QSA,L]
+# RewriteRule ^novinky/(.*) ./novinky.php?article=$1 [QSA]
+
+
+
+

@@ -1,0 +1,60 @@
+@import "variables";
+
+li {
+    list-style-type: none;
+    text-align: center;
+}
+
+body {
+    font-family: $font-text;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.sections {
+    margin-top: 150px;
+    width: 100%;
+    min-height: 70vh;
+    margin-bottom: 3%;
+    background-color: white;
+    text-align: center;
+}
+
+.from-left-mover {
+    position: relative;
+    z-index: 10;
+    visibility: hidden;
+}
+
+.from-right-mover {
+    visibility: hidden;
+}
+.visible{
+  visibility: visible !important; 
+}
+
+.is-active {
+    overflow-y: hidden;
+    height: 100vh;
+}
+
+.error {
+    display: none;
+}
+
+.display-block {
+    display: block !important;
+}
+
+
+.section-title{
+    height: calc(100vh - 120px);
+    @include display-flex();
+    @include justify-content(center);
+    @include align-items(center);
+}
+
+#add-new{
+    display: none;
+}

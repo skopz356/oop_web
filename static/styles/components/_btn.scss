@@ -1,0 +1,23 @@
+.btn-black {
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    color: white;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid $black;
+    background-color: $black;
+    padding: .7rem 1.4rem;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    transition: color .15s ease-in-out,background-color .20s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    &:hover{
+        background-color: $white;
+        color: $black;
+    }
+}

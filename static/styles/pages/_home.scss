@@ -1,0 +1,29 @@
+@import "../components/mixins";
+article{
+    text-align: left;
+    .heading{
+        margin-left: 20px;
+        margin-bottom: 30px;
+    }
+    .text{
+        margin-left: 30%;
+    }
+    margin-bottom: 150px;
+}
+
+.home{
+    header.main{
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        background-color: $black;
+        .logo-img{
+            @include m-site(auto);
+            padding: 50px 0;
+        }
+    }
+    div:nth-child(2){
+        @include display-flex();
+        @include align-items(center);
+    }
+}

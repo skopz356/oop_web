@@ -1,0 +1,112 @@
+$white: #ffffff;
+$black: #000000;
+
+li {
+    list-style-type: none;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.sections {
+    margin-top: 150px;
+    width: 100%;
+    min-height: 70vh;
+    margin-bottom: 3%;
+    background-color: white;
+    text-align: center;
+}
+
+.from-left-mover {
+    position: relative;
+    z-index: 10;
+    visibility: hidden;
+}
+
+.from-right-mover {
+    visibility: hidden;
+}
+.visible{
+  visibility: visible !important; 
+}
+
+.is-active {
+    overflow-y: hidden;
+    height: 100vh;
+}
+
+.error {
+    display: none;
+}
+
+.succSave {
+    position: absolute;
+    top: 100px;
+    background-color: green;
+    width: 200px;
+    right: calc(50% - 100px);
+    left: calc(50% - 100px);
+    z-index: 1000;
+    height: 50px;
+    text-align: center;
+}
+
+#login-form {
+    position: fixed;
+    z-index: 100;
+    top: calc(50% - 20px);
+    height: 200px;
+    background-color: $white;
+
+    @include display-flex;
+    @include align-items(center);
+    @include flex-direction(column);
+    @include justify-content(center);
+
+    padding: 0 20px;
+
+    label {
+        width: 52px;
+        margin-right: 10px;
+    }
+}
+
+.overlay {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-y: hidden;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+
+    @include justify-content(center);
+    @include align-items(center);
+}
+
+.display-block {
+    display: block !important;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.section-title{
+    height: calc(100vh - 120px);
+    @include display-flex();
+    @include justify-content(center);
+    @include align-items(center);
+}
+
+#add-new{
+    display: none;
+}

@@ -1,0 +1,24 @@
+@mixin display-flex {
+    display: flex;
+    display: -webkit-flex;
+}
+
+@mixin align-items($position) {
+    align-items: $position;
+    -webkit-align-items: $position;
+}
+
+@mixin justify-content($position) {
+    -webkit-justify-content: $position;
+    justify-content: $position;
+}
+
+@mixin flex-direction($direction) {
+    flex-direction: $direction;
+    -webkit-flex-direction: $direction;
+}
+
+@mixin transition($s){
+    -webkit-transition: $s; 
+    transition: width $s;
+}

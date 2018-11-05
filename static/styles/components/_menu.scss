@@ -1,0 +1,123 @@
+#menu li {
+    display: block;
+    min-width: 135px;
+    padding: 14px 16px;
+    margin: 15px;
+    @media screen and(min-width: 1070px){
+      float: left;
+    }
+}
+
+
+    nav{
+    background-color: $black;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 120px;
+    color: $white;
+  }
+
+
+#menu a {
+    position: relative;
+    font-size: 25px;
+    letter-spacing: .5px;
+    position: relative;
+    color: $white;
+    padding-bottom: 7px;
+    &.selected{
+      &:before{
+        content: '';
+        left: -20px;
+        top: 5px;
+        position: absolute;
+        display: block;
+        background-image: url("/static/images/icons/arrow_right.svg");
+        background-repeat: no-repeat;
+        width: 30px;
+        height: 20px;
+        background-size: contain;
+
+
+      }
+    }
+@media screen and(min-width: 1070px){
+    &:after {
+        content: "";
+        display: block;
+        width: 0;
+        transition: width 1s ease-in-out;
+        position: absolute;
+        bottom: 0;
+        background-color: #aab4e2;
+        height: 1px;
+    }
+
+    &:hover {
+        color: #aab4e2;
+        text-decoration: none;
+
+        &:after {
+            width: 100%;
+        }
+    }
+  }
+}
+
+#menu {
+  float: right;
+  
+  margin-top: 15px;
+  margin-left: 1%;
+  @media screen and(max-width: 1070px){
+    @include display-flex();
+    @include align-items(center);
+    @include justify-content(center);
+    @include flex-direction(column);
+    margin-top: 0;
+    margin-left: 0;
+    
+    height: 100vh;
+    transform: translateY(-100%); 
+    float: none;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+    transition: 0.5s;
+    background-color: rgba(0,0,0,0.9);
+    a{
+      color:$white;
+    }
+  }
+}
+
+.hamburger{
+  @media screen and(min-width: 1070px) {
+    display: none;
+    
+  }
+  font-size: 1.7rem;
+  border: none;
+  color: $white;
+  background-color: transparent;
+  z-index: 12;
+  margin-right: 30px;
+}
+
+.logo-img{
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 220px;
+  height: 45px;
+  background-image: url("/static/images/icons/logo.svg");
+  background-position: center;
+}
+
+.logo{
+  position: absolute;
+  left: 0;
+  margin-left: 10%;
+  z-index: 12;
+}
